@@ -1,4 +1,6 @@
+import { Link } from "@radix-ui/react-navigation-menu";
 import { ModeToggle } from "./mode-toggle";
+import { Button } from "./ui/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -11,6 +13,11 @@ export default function NavBar() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <h2>Calendar</h2>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Button asChild>
+            <Link href="/login">Login</Link>
+          </Button>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <ModeToggle />
